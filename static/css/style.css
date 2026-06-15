@@ -1,0 +1,406 @@
+/* --- Global Reset & Foundation --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0d0d12;
+    color: #e4e4e9;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* --- Gradient Background Element --- */
+.app-background-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: 
+        radial-gradient(circle at 10% 10%, rgba(138, 43, 226, 0.2) 0%, transparent 60%),
+        radial-gradient(circle at 90% 90%, rgba(30, 144, 255, 0.2) 0%, transparent 60%);
+    z-index: -1;
+}
+
+/* --- Premium Layout Containers --- */
+.landing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* --- Modern Header & Nav --- */
+.app-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 20, 24, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    color: #04d361; /* Original project green, used as a subtle accent */
+}
+
+.app-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.app-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.app-nav a:hover {
+    color: white;
+}
+
+/* --- Hero Section & Titles --- */
+.hero-section {
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge-accent {
+    background-color: rgba(138, 43, 226, 0.1);
+    color: rgba(138, 43, 226, 0.8);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    max-width: 700px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #8a2be2, #1e90ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.hero-cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* --- Button Styling --- */
+.btn {
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #8a2be2, #1e90ff);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Feature Cards Section --- */
+.features-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.feature-card {
+    flex: 1;
+    max-width: 350px;
+    background: #141418;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(138, 43, 226, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #8a2be2, #1e90ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+/* --- Chat Section Styling --- */
+.chat-section {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.chat-wrapper {
+    width: 100%;
+    height: 70vh; /* Original project chat window concept */
+    max-width: 800px;
+    margin: 0 auto;
+    background: #141418;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.control-panel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.control-panel label {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrapper select {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    padding-right: 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    appearance: none;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    font-size: 0.8rem;
+}
+
+.chat-display {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.message {
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.system {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.system i {
+    margin-right: 5px;
+}
+
+.user {
+    align-self: flex-end;
+    background-color: rgba(138, 43, 226, 0.1);
+    color: white;
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    border-bottom-right-radius: 4px;
+}
+
+.ai {
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom-left-radius: 4px;
+}
+
+/* --- Feedback Loop Styling --- */
+.feedback-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.feedback-buttons button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.feedback-buttons button:hover {
+    color: white;
+    border-color: #04d361; /* Project green accent */
+}
+
+/* --- Advanced Input Area --- */
+.input-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+textarea {
+    flex: 1;
+    height: 40px;
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 5px;
+    resize: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#send-btn {
+    background: linear-gradient(135deg, #8a2be2, #1e90ff);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+#send-btn:hover {
+    transform: scale(1.05);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .app-header {
+        border-radius: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-title {
+        font-size: 2.8rem;
+    }
+
+    .features-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        max-width: 100%;
+    }
+
+    .chat-wrapper {
+        height: auto;
+        min-height: 50vh;
+    }
+}

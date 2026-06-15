@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus AI Assistant | Powered by Multi-LLM Intelligence</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="app-background-gradient"></div>
+
+    <header class="app-header">
+        <div class="logo">
+            <i class="fas fa-robot"></i>
+            Nexus AI
+        </div>
+        <nav class="app-nav">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#chat">Get Started</a>
+        </nav>
+    </header>
+
+    <main class="landing-container" id="home">
+        <section class="hero-section">
+            <span class="badge-accent">Driven by Multi-LLM intelligence</span>
+            <h1 class="main-title">
+                Your AI Assistant, <span class="gradient-text">Reimagined.</span>
+            </span></h1>
+            <p class="main-subtitle">
+                Nexus AI is your gateway to powerful, versatile intelligence. Ask questions, condense text, or spark creativity—all in one stunning, fast interface.
+            </p>
+            <div class="hero-cta-buttons">
+                <a href="#chat" class="btn btn-primary">Start Chatting</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </section>
+
+        <section class="features-section" id="features">
+            <div class="feature-card">
+                <i class="fas fa-comments card-icon"></i>
+                <h3 class="card-title">Question Answering</h3>
+                <p class="card-description">Ask anything—get clear, accurate answers from deep factual knowledge bases.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-list-ul card-icon"></i>
+                <h3 class="card-title">Text Summarization</h3>
+                <p class="card-description">Paste long texts and receive concise, structured summaries that capture key points.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-pencil-alt card-icon"></i>
+                <h3 class="card-title">Content Generation</h3>
+                <p class="card-description">Generate unique stories, essays, or poems from simple creative prompts.</p>
+            </div>
+        </section>
+
+        <section class="chat-section" id="chat">
+            <div class="chat-wrapper">
+                <div class="control-panel">
+                    <label for="func-select">Model Mode:</label>
+                    <div class="select-wrapper">
+                        <select id="func-select">
+                            <option value="1">Q&A Mode</option>
+                            <option value="2">Summarize Mode</option>
+                            <option value="3">Creative Mode</option>
+                        </select>
+                        <i class="fas fa-chevron-down select-arrow"></i>
+                    </div>
+                </div>
+
+                <div class="chat-display" id="chat-display">
+                    <div class="message system">
+                        <i class="fas fa-terminal"></i> Ready for input. Select a mode above and type your prompt.
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <textarea id="user-input" placeholder="e.g., 'What is the capital of France?'"></textarea>
+                    <button id="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 Nexus AI Development Project.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
